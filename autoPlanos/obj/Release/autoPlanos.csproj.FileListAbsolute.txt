@@ -1,0 +1,10 @@
+C:\Users\g.jimenez\Documents\Visual Studio 2010\Projects\autoPlanos\autoPlanos\bin\Release\autoPlanos.dll
+C:\Users\g.jimenez\Documents\Visual Studio 2010\Projects\autoPlanos\autoPlanos\bin\Release\autoPlanos.pdb
+C:\Users\g.jimenez\Documents\Visual Studio 2010\Projects\autoPlanos\autoPlanos\obj\Release\ResolveAssemblyReference.cache
+C:\Users\g.jimenez\Documents\Visual Studio 2010\Projects\autoPlanos\autoPlanos\obj\Release\autoPlanos.Forms.frmGridEscudos.resources
+C:\Users\g.jimenez\Documents\Visual Studio 2010\Projects\autoPlanos\autoPlanos\obj\Release\autoPlanos.Properties.Resources.resources
+C:\Users\g.jimenez\Documents\Visual Studio 2010\Projects\autoPlanos\autoPlanos\obj\Release\GenerateResource.read.1.tlog
+C:\Users\g.jimenez\Documents\Visual Studio 2010\Projects\autoPlanos\autoPlanos\obj\Release\GenerateResource.write.1.tlog
+C:\Users\g.jimenez\Documents\Visual Studio 2010\Projects\autoPlanos\autoPlanos\obj\Release\autoPlanos.dll
+C:\Users\g.jimenez\Documents\Visual Studio 2010\Projects\autoPlanos\autoPlanos\obj\Release\autoPlanos.pdb
+C:\Users\g.jimenez\Documents\Visual Studio 2010\Projects\autoPlanos\autoPlanos\bin\Release\autoPlanos.esriAddIn

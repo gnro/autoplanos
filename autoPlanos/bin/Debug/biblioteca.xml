@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>biblioteca</name>
+    </assembly>
+    <members>
+        <member name="M:biblioteca.conecta.mostraRegistros(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Funcion generica para ver los registos
+             </summary>
+        </member>
+        <member name="M:biblioteca.configuracion.mostrarMunicipios">
+            <summary>
+            Funcion para ver los registos
+             </summary>
+        </member>
+        <member name="M:biblioteca.configuracion.busquedaMunicipio(System.Int32)">
+            <summary>
+            Retorna una DataTable en base aun ID
+             </summary>
+            <param name="id_escudo"> identificador del registro a buscar.</param>
+        </member>
+        <member name="M:biblioteca.constancias.busquedaDocs(System.Int32)">
+            <summary>
+            Retorna una DataTable en base aun ID
+             </summary>
+            <param name="id_escudo"> identificador del registro a buscar.</param>
+        </member>
+    </members>
+</doc>
