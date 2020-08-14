@@ -49,8 +49,7 @@ namespace autoPlanos.Clases
                     toy.insertaDatosM("ERROR", "0", ref matriz);
                 return matriz;
             }catch (System.Exception ex){
-                MessageBox.Show("Error: " + ex.Message, "clsFeatureTools.returMatrizDataUnique");
-                MessageBox.Show("Error: " + ex.StackTrace);
+                MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "clsFeatureTools.returMatrizDataUnique");
                 return null;
             }
         }

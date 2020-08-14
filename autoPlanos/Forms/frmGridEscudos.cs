@@ -171,9 +171,6 @@ namespace autoPlanos.Forms
              }
         }
 
-         private void picFoto_Click(object sender, EventArgs e)
-         {
-
-         }
+       
     }
 }

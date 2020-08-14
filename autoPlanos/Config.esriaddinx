@@ -14,8 +14,8 @@
     <ArcMap>
       <Commands>
         <Button id="DesarrolloGeomatico_autoPlanos_btnCreaPlanosZ" class="autoPlanos.Botones.btnCreaPlanosZ" message="Aplicación por medio de la cual se puedan crear planos de zonificación catastral de valores municipales de forma semiautomática" caption="Genera planos de zona de valor" tip="Genera los diferentes planos segun el area de visualización" category="autoPlanos" image="Images\btnCreaPlanosZ.png" />
-        <Button id="DesarrolloGeomatico_autoPlanos_btnMunicipioAreas" class="autoPlanos.Botones.btnMunicipioAreas" message="Asigna el número de municipio a las diferentes visualizaciones" caption="Asigna municipio" tip="Asigna el número de Municipio a las áreas de mapas" category="autoPlanos" image="Images\btnMunicipioAreas.png" />
-        <!-- --><Button id="DesarrolloGeomatico_autoPlanos_bntImgMunicipios" class="autoPlanos.Botones.bntImgMunicipios" message="Permite cambiar un escudo de los municipios, permitiendo cambiar la imagen" caption="Escudos" tip="Muestra en una lista los escudos de los municipios" category="autoPlanos" image="Images\bntImgMunicipios.png" />
+        <!--<Button id="DesarrolloGeomatico_autoPlanos_btnMunicipioAreas" class="autoPlanos.Botones.btnMunicipioAreas" message="Asigna el número de municipio a las diferentes visualizaciones" caption="Asigna municipio" tip="Asigna el número de Municipio a las áreas de mapas" category="autoPlanos" image="Images\btnMunicipioAreas.png" />
+         --><Button id="DesarrolloGeomatico_autoPlanos_bntImgMunicipios" class="autoPlanos.Botones.bntImgMunicipios" message="Permite cambiar un escudo de los municipios, permitiendo cambiar la imagen" caption="Escudos" tip="Muestra en una lista los escudos de los municipios" category="autoPlanos" image="Images\bntImgMunicipios.png" />
       </Commands>
       <Toolbars>
         <Toolbar id="DesarrolloGeomatico_autoPlanos_Auto_Planos" caption="Auto Planos" showInitially="false">

@@ -46,8 +46,7 @@ namespace autoPlanos.Clases
                 bytes =( Byte[])(tbl.Rows[i][2]);
                 clsobj.Imagen = bytes;
             }catch (Exception ex){
-                MessageBox.Show("Error: " + ex.Message, "ObtenerImagen");
-                MessageBox.Show("Error: " + ex.StackTrace); 
+                MessageBox.Show("Error: " + ex.Message+"\n" + ex.StackTrace, "ObtenerImagen");
             }
             return clsobj;
         }
@@ -60,8 +59,7 @@ namespace autoPlanos.Clases
                 for (int i = 0; i < tbl.Rows.Count ; i++)
                     lstobj.Add(ObtenerImagen(tbl, i));
             }catch (Exception ex){
-                MessageBox.Show("Error: " + ex.Message, "ObtenerImagenes");
-                MessageBox.Show("Error: " + ex.StackTrace); 
+                MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "ObtenerImagenes");
             }
             return lstobj;
         }

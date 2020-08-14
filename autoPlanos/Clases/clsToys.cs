@@ -31,8 +31,7 @@ namespace autoPlanos.Clases
                 else
                     return palabra;
             }catch (System.Exception ex){
-                MessageBox.Show("Error: " + ex.Message, "checaPalabra");
-                MessageBox.Show("Error: " + ex.StackTrace);
+                MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "checaPalabra");
                 return null;
             }
         }
@@ -45,7 +44,9 @@ namespace autoPlanos.Clases
         }
         public string convierteaMoneda(string cantidad){
             double m = 0;
-            m = Convert.ToDouble(cantidad);
+            if (cantidad !="")
+                m = Convert.ToDouble(cantidad);
+
             return m.ToString("C", CultureInfo.CurrentCulture);
         }
         public long redondea(long numero, long m, long tope){
@@ -85,8 +86,7 @@ namespace autoPlanos.Clases
                 }
                 return palabraResul;
             } catch (Exception ex){
-                MessageBox.Show("Error: " + ex.Message, "extraePalabra");
-                MessageBox.Show("Error: " + ex.StackTrace);
+                MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "extraePalabra");
             }
             return palabraResul;
         }
@@ -121,8 +121,7 @@ namespace autoPlanos.Clases
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "buscaEscudo");
-                MessageBox.Show("Error: " + ex.StackTrace);
+                MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "buscaEscudo");
                 return null;
             }
         }
@@ -147,8 +146,7 @@ namespace autoPlanos.Clases
                 }
                 return lists;
             }catch (System.Exception ex){
-                MessageBox.Show("Error: " + ex.Message, "eliminaDuplicadosM");
-                MessageBox.Show("Error: " + ex.StackTrace);
+                MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "eliminaDuplicadosM");
                 return null;
             }
         }

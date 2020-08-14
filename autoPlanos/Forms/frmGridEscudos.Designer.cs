@@ -95,7 +95,6 @@
             this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFoto.TabIndex = 5;
             this.picFoto.TabStop = false;
-            this.picFoto.Click += new System.EventHandler(this.picFoto_Click);
             this.picFoto.DoubleClick += new System.EventHandler(this.picFoto_DoubleClick);
             // 
             // gridCatEscudo
