@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Collections;
 using System.Globalization;
@@ -107,7 +105,6 @@ namespace autoPlanos.Clases
         }
         public String buscaEscudo(int codigo){
             Byte[] bytes;
-            //clienteDAO obj = new clienteDAO();
             try { 
                 long dt = DateTime.Now.ToFileTime();
                 DataTable tbl = b.busquedaMunicipio(codigo);

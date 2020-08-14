@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data;
-using System.Diagnostics;
-using ESRI.ArcGIS.ArcMapUI;
+﻿using ESRI.ArcGIS.ArcMapUI;
 using autoPlanos;
 static class globales
 {

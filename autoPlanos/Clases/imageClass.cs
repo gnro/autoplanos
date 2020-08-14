@@ -12,9 +12,7 @@ namespace autoPlanos.Clases
     {
         #region Set Class Variables …
         Byte[] bytes;//arreglo de bytes para la imagen
-      //   clienteDAO obj = new clienteDAO(); ClienteDAO
         private imageClass clsobj;
-        //private List<int> lstobj= new List<int> (of imageClass);
         private List<imageClass> lstobj;
         #endregion
         #region Set Property Data …

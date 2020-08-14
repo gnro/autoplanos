@@ -150,7 +150,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Config.esriaddinx</DependentUpon>
     </Compile>
-    <Compile Include="Diccionary\mDiccionario.cs" />
     <Compile Include="Forms\f.cs">
       <SubType>Form</SubType>
     </Compile>

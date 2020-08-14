@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
-using System.Windows.Forms;
-
-namespace autoPlanos.Botones
+﻿namespace autoPlanos.Botones
 {
     public class bntImgMunicipios : ESRI.ArcGIS.Desktop.AddIns.Button
     {

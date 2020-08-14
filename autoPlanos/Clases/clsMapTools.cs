@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using stdole;
 using ESRI.ArcGIS.Carto;
 using ESRI.ArcGIS.ArcMapUI;
 using ESRI.ArcGIS.Geodatabase;
 using ESRI.ArcGIS.Geometry;
 using ESRI.ArcGIS.Display;
-//using ESRI.ArcGIS.ADF.COMSupport;
-//using autoPlanos.Diccionary;
 using B = featureTools.feature;
 using G = geoProcesos.tools;
 using System.Collections;
@@ -58,17 +53,14 @@ namespace autoPlanos.Clases
                 escudo = funcAux.buscaEscudo(clvMunicipio);
                 pPicElement.ImportPictureFromFile(escudo);
                 pPicElement.MaintainAspectRatio = true;
-
                 //Set the New Element to the Picture Element
                 IElement pElement = (IElement)pPicElement;
-
                 //Create Target Envelope
                 IEnvelope pEnv = new EnvelopeClass();
                 double y = 26.3;
                 double x = 35.6;
                 pEnv.PutCoords(x, (y-1.4),(x+1.24), y);//Cambia el tamaño
                 pElement.Geometry = pEnv;
-
                 //set the container as the pagelayout and add the element created
                 IGraphicsContainer pGraphicsContainer = (IGraphicsContainer)pPageLayout;
                 pGraphicsContainer.AddElement(pElement, 0);
@@ -85,22 +77,14 @@ namespace autoPlanos.Clases
         {
             try
             {
-           // IMeasuredGrid measuredGrid = new MeasuredGridClass();
-            //mapGrid = measuredGrid as IMapGrid;
             IMeasuredGrid measuredGrid = mapGrid as IMeasuredGrid;
-
-            //Set the IMeasuredGrid properties.
-            //Origin coordinates and interval sizes are in map units.
             measuredGrid.FixedOrigin = true;
             measuredGrid.Units = pMap.MapUnits;
             double escalaD = pMap.MapScale;
             double n = (escalaD / 20);// *100;
-            long escala = (long)n;// funcAux.redondea(Convert.ToInt64(escalaD / 4), 1, 10);
-            
+            long escala = (long)n;            
             measuredGrid.XIntervalSize = escala; //Meridian interval.
-            measuredGrid.YIntervalSize = funcAux.redondea(Convert.ToInt64(escalaD / 16), 1, 10); //Parallel interval.
-
-            //Set the IProjectedGrid properties.
+            measuredGrid.YIntervalSize = funcAux.redondea(Convert.ToInt64(escalaD / 16), 1, 10);
             IProjectedGrid projectedGrid = measuredGrid as IProjectedGrid;
             projectedGrid.SpatialReference = pMap.SpatialReference;
             }
@@ -143,8 +127,6 @@ namespace autoPlanos.Clases
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         public List<IElement> discrimaDatosLayer(string n_municipio, string n_plano, string t_plano, IMxDocument pMxDoc, ILayer municipios, ILayer seleccion, ILayer zona, ILayer calles)
         {
-           // clsGeoTools arcpy =new clsGeoTools();
-            //IElement[] functionReturnValue = null;HorizontalAlignmentRightToLeft
             ILayer MANZANAS;
             List<IElement> pElem = new List<IElement>();
             List<IElement> pElemU = new List<IElement>();
@@ -183,7 +165,6 @@ namespace autoPlanos.Clases
                /*Inserta el numero del plano*/
                 pElem.Add( addTitleToLayout(pMxDoc, 5.0, 74.3, 9, (IGraphicsContainer)pMxDoc.PageLayout, true,"PLANO "+ n_plano + "  de  " + t_plano));
                 seleccionZona = B.returnLayerByName(ArcMap.Document, "seleccionZona");
-
                 G.selectClip(zona, seleccionZona, globales.gdb + "zonasValor");
                 B.limpiarZonasTmp(ArcMap.Document, "municipio");
                 zonasValor = B.returnLayerByName(ArcMap.Document, "zonasValor");
@@ -218,16 +199,13 @@ namespace autoPlanos.Clases
                 string mun = "municipio";
                 ILayer SELECCION = B.returnLayerByName(ArcMap.Document, mun);
                 G.selectLayerByAttribute(SELECCION, "municipio = " + n_municipio, true);
-
                 B.zoomToSeleccion(pMxDoc, mun);
                 pMap2.ClearSelection();
-
                 pMxDoc.ActiveView.Refresh();
                 pMap = pMxDoc.Maps.get_Item(0);
                 pMxDoc.ActiveView = (IActiveView)pMap;
                 pMxDoc.ActiveView = (IActiveView)pMxDoc.PageLayout;
-#endregion
- 
+                #endregion
                 return pElem;
             } catch (System.Exception ex) {
                 MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "clsMapTools.discrimaDatosLayer");
@@ -250,7 +228,6 @@ namespace autoPlanos.Clases
             IFeatureClass fc = default(IFeatureClass);
             int n = 0;
             string leyenda = null;
-            // = new List<IElement>(); 
             fc = B.returnFeatureLayerByName(ArcMap.Document, nombreLayer).FeatureClass;
             try
             {
@@ -263,21 +240,21 @@ namespace autoPlanos.Clases
                 {
                     Array.Resize(ref arrayTmp, i + 1); 
                     arrayTmp[i] = clave_zona[i].clave;
-switch (clave_zona[i].clave)
-{
-    case "LOC. FORÁNEA":
-    case "LOC FORÁNEA":
-        leyenda = "LOC. FORÁNEA = LOCALIDAD FORÁNEA\n";
-        break;
-    case "LOC. FORANEA":
-    case "LOC FORANEA":
-        leyenda = "LOC. FORANEA = LOCALIDAD FORÁNEA\n";
-        break;
-    case "SUB.":
-    case "SUB":
-        leyenda = "SUB. = SUBURBANO\n ";
-        break;
-}
+                    switch (clave_zona[i].clave)
+                    {
+                        case "LOC. FORÁNEA":
+                        case "LOC FORÁNEA":
+                            leyenda = "LOC. FORÁNEA = LOCALIDAD FORÁNEA\n";
+                            break;
+                        case "LOC. FORANEA":
+                        case "LOC FORANEA":
+                            leyenda = "LOC. FORANEA = LOCALIDAD FORÁNEA\n";
+                            break;
+                        case "SUB.":
+                        case "SUB":
+                            leyenda = "SUB. = SUBURBANO\n ";
+                            break;
+                    }
                 }
                 System.Array.Sort(arrayTmp);
 #region valores monetario de la zona
@@ -326,9 +303,6 @@ if (leyenda != null)
             IEnvelope pEnv;
             IPoint pPoint = default(IPoint);
             try{
-                // pGc.Reset()
-                //Set the font and color properties
-                //for the title
                 myFont = (stdole.IFontDisp)new stdole.StdFont();
                 myFont.Name = "Arial";
                 myFont.Bold = b;
