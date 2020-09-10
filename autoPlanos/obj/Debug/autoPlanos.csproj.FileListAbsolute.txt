@@ -179,8 +179,6 @@ E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\ESRI.A
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.ADF.Connection.Core.dll
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.ADF.Core.dll
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Version.dll
-E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\biblioteca.pdb
-E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\biblioteca.xml
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.3DAnalyst.xml
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.ADF.Connection.Local.xml
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.ADF.Local.xml
@@ -194,9 +192,6 @@ E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\ESRI.A
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Geoprocessor.xml
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.GlobeCore.xml
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Output.xml
-E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\featureTools.pdb
-E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\featureTools.xml
-E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\geoProcesos.pdb
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Animation.xml
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\obj\Debug\autoPlanos.csprojResolveAssemblyReference.cache
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\obj\Debug\autoPlanos.Forms.f.resources
@@ -206,3 +201,44 @@ E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\obj\Debug\autoPl
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\obj\Debug\autoPlanos.dll
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\obj\Debug\autoPlanos.pdb
 E:\Respaldo_g.jimenez\Projects\autoPlanos\autoplanos\autoPlanos\bin\Debug\autoPlanos.esriAddIn
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\autoPlanos.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\autoPlanos.pdb
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.3DAnalyst.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.ADF.Connection.Local.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.ADF.Local.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Analyst3DTools.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Carto.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Display.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Editor.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Geodatabase.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Geometry.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Geoprocessing.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Geoprocessor.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.GlobeCore.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Output.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Animation.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.ADF.Connection.Core.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.ADF.Core.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Version.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.3DAnalyst.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.ADF.Connection.Local.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.ADF.Local.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Analyst3DTools.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Carto.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Display.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Editor.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Geodatabase.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Geometry.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Geoprocessing.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Geoprocessor.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.GlobeCore.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Output.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\ESRI.ArcGIS.Animation.xml
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\obj\Debug\autoPlanos.csprojResolveAssemblyReference.cache
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\obj\Debug\autoPlanos.Forms.f.resources
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\obj\Debug\autoPlanos.Forms.frmGridEscudos.resources
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\obj\Debug\autoPlanos.Properties.Resources.resources
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\obj\Debug\autoPlanos.csproj.GenerateResource.Cache
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\obj\Debug\autoPlanos.dll
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\obj\Debug\autoPlanos.pdb
+E:\Respaldo_g.jimenez\Projects\autoPlanos - 2\autoplanos\autoPlanos\bin\Debug\autoPlanos.esriAddIn

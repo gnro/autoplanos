@@ -32,6 +32,13 @@ namespace autoPlanos.Clases
                 MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "zoomToPageLayout");
             }
         }
+        public void capasOnOff(bool b)
+        {
+            B.layerVisible(ArcMap.Document, globales.nomlayerSELECT, b);
+            B.layerVisible(ArcMap.Document, "ZONA", b);
+            B.groupLayerVisible(ArcMap.Document, "Referencia", b);
+            B.groupLayerVisible(ArcMap.Document, "Cartografia", b);
+        }
         public string seleccionaDir()
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
@@ -46,7 +53,7 @@ namespace autoPlanos.Clases
             apppath = apppath + "\\";
             return apppath;
         }
-        public IElement cambiaEscudo(int clvMunicipio, IPageLayout pPageLayout){
+        private IElement cambiaEscudo(int clvMunicipio, IPageLayout pPageLayout){
             IPictureElement pPicElement = new BmpPictureElementClass();
             string escudo = null;
             try{
@@ -64,7 +71,6 @@ namespace autoPlanos.Clases
                 //set the container as the pagelayout and add the element created
                 IGraphicsContainer pGraphicsContainer = (IGraphicsContainer)pPageLayout;
                 pGraphicsContainer.AddElement(pElement, 0);
-
                 IActiveView pActiveView = (IActiveView)pPageLayout;
                 pActiveView.PartialRefresh(esriViewDrawPhase.esriViewGraphics, pElement, pEnv);
                 return pElement;
@@ -73,7 +79,7 @@ namespace autoPlanos.Clases
                 return null;
             }
         }
-        public void resizeMeasuredGrid(IMap pMap, IMapGrid mapGrid)
+        private void resizeMeasuredGrid(IMap pMap, IMapGrid mapGrid)
         {
             try
             {
@@ -88,8 +94,7 @@ namespace autoPlanos.Clases
             IProjectedGrid projectedGrid = measuredGrid as IProjectedGrid;
             projectedGrid.SpatialReference = pMap.SpatialReference;
             }
-            catch (System.Exception ex)
-            {
+            catch (System.Exception ex){
                 MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "zoomToCapaPageLayout");
             }
         }
@@ -101,7 +106,6 @@ namespace autoPlanos.Clases
                 IFrameElement frameElement = graphicsContainer.FindFrame(map);
                 IMapFrame mapFrame = frameElement as IMapFrame;
                 IMapGrids mapGrids = mapFrame as IMapGrids;
-
                 IMapGrid mapGrid = null;
                 if (mapGrids.MapGridCount > 0)
                 {
@@ -109,23 +113,18 @@ namespace autoPlanos.Clases
                     resizeMeasuredGrid(map,mapGrid);
                 }
                 else
-                {
                     MessageBox.Show("No grid found.");
-                }
-               
                 return;
             }catch (System.Exception ex){
                 MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "zoomToCapaPageLayout");
             }
         }
-
         public void ToggleActiveView(IMxDocument pMxDoc)
         {
             if (!(pMxDoc.ActiveView is IPageLayout))
                 pMxDoc.ActiveView = (IActiveView)pMxDoc.PageLayout;
         }
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        public List<IElement> discrimaDatosLayer(string n_municipio, string n_plano, string t_plano, IMxDocument pMxDoc, ILayer municipios, ILayer seleccion, ILayer zona, ILayer calles)
+        public List<IElement> discrimaDatosLayer(string n_municipio, string n_plano, string t_plano, IMxDocument pMxDoc, ILayer municipios, ILayer seleccion, ILayer zona)
         {
             ILayer MANZANAS;
             List<IElement> pElem = new List<IElement>();
@@ -142,7 +141,6 @@ namespace autoPlanos.Clases
             try {
                 G.selectLayerByAttribute(municipios, "municipio = " + n_municipio, true);
                 G.copyFeatures(municipios, globales.gdb + "municipio");
-               // //////////////////////////////-----------/////////////////////////////
                 IElement m = cambiaEscudo(Convert.ToInt16(n_municipio), pMxDoc.PageLayout);
                 pElem.Add(m);
   #region Nmbre del plano y titulo de municipio
@@ -185,11 +183,9 @@ namespace autoPlanos.Clases
                 }
                 G.selectClip(MANZANAS, zonasValor, globales.gdb + "manzana");
                 manzana = B.returnLayerByName(ArcMap.Document, "manzana");
-               // G.copyFeatures(manzana, globales.gdb + "manzana" + n_municipio);////////////////////////////////////////////////////////////
                 G.applySymbologyFromLayer(manzana, MANZANAS);
                 pMap.ClearSelection();
                 B.limpiarZonasTmp(ArcMap.Document, "seleccionZona");
-                /////////////////////////////////////////////
 #region Macro mapa
 
                 IMapDocument pMapDoc = new MapDocumentClass();
@@ -212,13 +208,7 @@ namespace autoPlanos.Clases
                 return null;
             }
         }
-        //////////////////////////////////////////////
-        public void expo(string nom_mun)
-        {
-            ILayer municipio = B.returnLayerByName(ArcMap.Document, "municipio");
-        }
-        //////////////////////////////////////////////////////
-        public List<IElement> addMapSurroundM(IMxDocument pMxDoc, string nombreLayer, string campoLayer, string campoLayer2, double x, double y, ref  List<IElement> pElem)
+        private List<IElement> addMapSurroundM(IMxDocument pMxDoc, string nombreLayer, string campoLayer, string campoLayer2, double x, double y, ref  List<IElement> pElem)
         {
             List<objetos> clave_zona = null;
             string clave = null;
@@ -279,13 +269,11 @@ namespace autoPlanos.Clases
                     y = y - 1.430;
                 #endregion
                 }
-if (leyenda != null)
-{
-
-    leyenda = "CLAVE:\n " + leyenda;
-    IElement m = addTitleToLayout(pMxDoc, 5.0, 70, 10.9, (IGraphicsContainer)pMxDoc.PageLayout, true, leyenda,true);
-    pElem.Add(m);
-}
+                if (leyenda != null){
+                    leyenda = "CLAVE:\n " + leyenda;
+                    IElement m = addTitleToLayout(pMxDoc, 5.0, 70, 10.9, (IGraphicsContainer)pMxDoc.PageLayout, true, leyenda,true);
+                    pElem.Add(m);
+                }
                 return pElem;
             }
             catch (System.Exception ex)
@@ -294,7 +282,7 @@ if (leyenda != null)
                 return null;
             }
         }
-        public IElement addTitleToLayout(IMxDocument pMxDoc,double S, double x, double y,  IGraphicsContainer pGc, bool b, string texto,bool rb=false) {
+        private IElement addTitleToLayout(IMxDocument pMxDoc,double S, double x, double y,  IGraphicsContainer pGc, bool b, string texto,bool rb=false) {
             ITextElement pTxtElem;
             ITextSymbol pTxtSym = default(ITextSymbol);
             IRgbColor myColor = default(IRgbColor);
@@ -314,7 +302,6 @@ if (leyenda != null)
                 ///''''''''''''''''''''''''''''''
                 //Create a text element
                 pTxtElem = (ITextElement)new TextElement();
-                
                 //Create a text symbol
                 pTxtSym = new TextSymbol();
                 pTxtSym.Color = myColor;

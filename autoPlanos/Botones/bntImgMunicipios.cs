@@ -5,13 +5,11 @@
         public bntImgMunicipios()
         {
         }
-
         protected override void OnClick()
         {
             Forms.frmGridEscudos bDicc = new Forms.frmGridEscudos();
             bDicc.ShowDialog();
         }
-
         protected override void OnUpdate()
         {
         }

@@ -124,6 +124,7 @@
     <Reference Include="geoProcesos">
       <HintPath>..\..\geoProcesos\geoProcesos\bin\Debug\geoProcesos.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -139,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Botones\bntImgMunicipios.cs" />
+    <Compile Include="Clases\chkCapas.cs" />
     <Compile Include="Clases\clsExport.cs" />
     <Compile Include="Clases\clsFeatureTools.cs" />
     <Compile Include="Clases\clsMapTools.cs" />
