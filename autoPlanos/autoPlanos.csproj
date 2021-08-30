@@ -86,6 +86,7 @@
     <Reference Include="ESRI.ArcGIS.Editor, Version=10.4.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Framework">
       <Private>False</Private>
@@ -118,13 +119,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="featureTools">
-      <HintPath>..\..\featureTools\featureTools\bin\Debug\featureTools.dll</HintPath>
+    <Reference Include="featureTools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\featureTools\featureTools\bin\Debug\featureTools.dll</HintPath>
     </Reference>
-    <Reference Include="geoProcesos">
-      <HintPath>..\..\geoProcesos\geoProcesos\bin\Debug\geoProcesos.dll</HintPath>
+    <Reference Include="geoProcesos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\geoProcesos\geoProcesos\bin\Debug\geoProcesos.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -140,7 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Botones\bntImgMunicipios.cs" />
-    <Compile Include="Clases\chkCapas.cs" />
+    <Compile Include="Botones\herramienta.cs" />
     <Compile Include="Clases\clsExport.cs" />
     <Compile Include="Clases\clsFeatureTools.cs" />
     <Compile Include="Clases\clsMapTools.cs" />
@@ -152,6 +154,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Config.esriaddinx</DependentUpon>
     </Compile>
+    <Compile Include="Diccionary\mDiccionario.cs" />
     <Compile Include="Forms\f.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +243,18 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\herramienta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\herramienta.cur" />
   </ItemGroup>
   <PropertyGroup>
     <ZipFileExtension>esriAddIn</ZipFileExtension>

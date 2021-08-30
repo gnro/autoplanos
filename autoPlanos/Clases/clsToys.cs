@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 using System.Collections;
 using System.Globalization;
@@ -29,7 +31,8 @@ namespace autoPlanos.Clases
                 else
                     return palabra;
             }catch (System.Exception ex){
-                MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "checaPalabra");
+                MessageBox.Show("Error: " + ex.Message, "checaPalabra");
+                MessageBox.Show("Error: " + ex.StackTrace);
                 return null;
             }
         }
@@ -84,7 +87,8 @@ namespace autoPlanos.Clases
                 }
                 return palabraResul;
             } catch (Exception ex){
-                MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "extraePalabra");
+                MessageBox.Show("Error: " + ex.Message, "extraePalabra");
+                MessageBox.Show("Error: " + ex.StackTrace);
             }
             return palabraResul;
         }
@@ -105,6 +109,7 @@ namespace autoPlanos.Clases
         }
         public String buscaEscudo(int codigo){
             Byte[] bytes;
+            //clienteDAO obj = new clienteDAO();
             try { 
                 long dt = DateTime.Now.ToFileTime();
                 DataTable tbl = b.busquedaMunicipio(codigo);
@@ -118,7 +123,8 @@ namespace autoPlanos.Clases
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "buscaEscudo");
+                MessageBox.Show("Error: " + ex.Message, "buscaEscudo");
+                MessageBox.Show("Error: " + ex.StackTrace);
                 return null;
             }
         }
@@ -143,7 +149,8 @@ namespace autoPlanos.Clases
                 }
                 return lists;
             }catch (System.Exception ex){
-                MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "eliminaDuplicadosM");
+                MessageBox.Show("Error: " + ex.Message, "eliminaDuplicadosM");
+                MessageBox.Show("Error: " + ex.StackTrace);
                 return null;
             }
         }

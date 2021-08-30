@@ -12,7 +12,9 @@ namespace autoPlanos.Clases
     {
         #region Set Class Variables …
         Byte[] bytes;//arreglo de bytes para la imagen
+      //   clienteDAO obj = new clienteDAO(); ClienteDAO
         private imageClass clsobj;
+        //private List<int> lstobj= new List<int> (of imageClass);
         private List<imageClass> lstobj;
         #endregion
         #region Set Property Data …
@@ -44,7 +46,8 @@ namespace autoPlanos.Clases
                 bytes =( Byte[])(tbl.Rows[i][2]);
                 clsobj.Imagen = bytes;
             }catch (Exception ex){
-                MessageBox.Show("Error: " + ex.Message+"\n" + ex.StackTrace, "ObtenerImagen");
+                MessageBox.Show("Error: " + ex.Message, "ObtenerImagen");
+                MessageBox.Show("Error: " + ex.StackTrace); 
             }
             return clsobj;
         }
@@ -57,7 +60,8 @@ namespace autoPlanos.Clases
                 for (int i = 0; i < tbl.Rows.Count ; i++)
                     lstobj.Add(ObtenerImagen(tbl, i));
             }catch (Exception ex){
-                MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace, "ObtenerImagenes");
+                MessageBox.Show("Error: " + ex.Message, "ObtenerImagenes");
+                MessageBox.Show("Error: " + ex.StackTrace); 
             }
             return lstobj;
         }

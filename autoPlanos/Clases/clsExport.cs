@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Runtime.InteropServices;
 using ESRI.ArcGIS.Carto;
 using ESRI.ArcGIS.Output;
@@ -22,6 +25,7 @@ namespace autoPlanos.Clases
             IPrintAndExport docPrintExport;
             IOutputRasterSettings RasterSettings;
             bool bReenable = false;
+
             if (GetFontSmoothing())
             {
                 /* font smoothing is on, disable it and set the flag to reenable it later. */
@@ -30,6 +34,7 @@ namespace autoPlanos.Clases
                 if (GetFontSmoothing())
                     return;
             }
+
             // The Export*Class() type initializes a new export class of the desired type.
             if (ExportType == "PDF")
             {
@@ -103,6 +108,7 @@ namespace autoPlanos.Clases
         {
             bool iResult;
             int pv = 0;
+
             /* call to systemparametersinfo to set the font smoothing value */
             iResult = SystemParametersInfo(SPI_SETFONTSMOOTHING, 0, ref pv, SPIF_UPDATEINIFILE);
         }
@@ -111,16 +117,20 @@ namespace autoPlanos.Clases
         {
             bool iResult;
             int pv = 0;
+
             /* call to systemparametersinfo to set the font smoothing value */
             iResult = SystemParametersInfo(SPI_SETFONTSMOOTHING, 1, ref pv, SPIF_UPDATEINIFILE);
+
         }
 
         private Boolean GetFontSmoothing()
         {
             bool iResult;
             int pv = 0;
+
             /* call to systemparametersinfo to get the font smoothing value */
             iResult = SystemParametersInfo(SPI_GETFONTSMOOTHING, 0, ref pv, 0);
+
             if (pv > 0)
                 return true;
             else
